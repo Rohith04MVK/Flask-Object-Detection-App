@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="centered">
+    <div class="row">
+        <div class="col-md-5"> 
+            <div class="image-container">
+                <figure>
+                  <figcaption style="color:#b30000"><b>Detected Image</b></figcaption>
+                  <img src="static/detections/{{display_detection}}" style="width:500px;height:300px;">
+                </figure>
+            
+    </div>
+    </br>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="upload-form">
+                <p style="color:#b30000"><b>Detect another?</b></p>
+                <form action = "/uploader" method = "POST" 
+                                  enctype = "multipart/form-data">
+                    <input class="example_a", type = "file" name = "file" />
+                    <input class="example_a", type = "submit"/>
+                </form>
+            </div>      
+        </div>
+    </div>
+</div>
+{% endblock %} 
